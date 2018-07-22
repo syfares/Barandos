@@ -9,8 +9,8 @@
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between bulwark-cli and bulwarkd)
- * of a given instance of the Bulwark system.
+ * CBaseChainParams defines the base parameters (shared between barandos-cli and barandosd)
+ * of a given instance of the barandos system.
  */
 class CBaseChainParams
 {

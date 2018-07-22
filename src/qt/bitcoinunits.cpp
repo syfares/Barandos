@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Bulwark developers
+// Copyright (c) 2017-2018 The bulwark developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,18 +20,18 @@ BitcoinUnits::BitcoinUnits(QObject* parent) : QAbstractListModel(parent),
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(BWK);
-    unitlist.append(mBWK);
-    unitlist.append(uBWK);
+    unitlist.append(BARA);
+    unitlist.append(mBARA);
+    unitlist.append(uBARA);
     return unitlist;
 }
 
 bool BitcoinUnits::valid(int unit)
 {
     switch (unit) {
-    case BWK:
-    case mBWK:
-    case uBWK:
+    case BARA:
+    case mBARA:
+    case uBARA:
         return true;
     default:
         return false;
@@ -41,12 +41,12 @@ bool BitcoinUnits::valid(int unit)
 QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
-    case BWK:
-        return QString("bulwark");
-    case mBWK:
-        return QString("mbulwark");
-    case uBWK:
-        return QString::fromUtf8("ubulwark");
+    case BARA:
+        return QString("barandos");
+    case mBARA:
+        return QString("mbarandos");
+    case uBARA:
+        return QString::fromUtf8("ubarandos");
     default:
         return QString("???");
     }
@@ -56,23 +56,23 @@ QString BitcoinUnits::name(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case BWK:
-            return QString("BWK");
-        case mBWK:
-            return QString("mBWK");
-        case uBWK:
-            return QString::fromUtf8("μBWK");
+        case BARA:
+            return QString("BARA");
+        case mBARA:
+            return QString("mBARA");
+        case uBARA:
+            return QString::fromUtf8("μBARA");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case BWK:
-            return QString("tBWK");
-        case mBWK:
-            return QString("mtBWK");
-        case uBWK:
-            return QString::fromUtf8("μtBWK");
+        case BARA:
+            return QString("tBARA");
+        case mBARA:
+            return QString("mtBARA");
+        case uBARA:
+            return QString::fromUtf8("μtBARA");
         default:
             return QString("???");
         }
@@ -83,23 +83,23 @@ QString BitcoinUnits::description(int unit)
 {
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
-        case BWK:
-            return QString("BWK");
-        case mBWK:
-            return QString("Milli-BWK (1 / 1" THIN_SP_UTF8 "000)");
-        case uBWK:
-            return QString("Micro-BWK (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case BARA:
+            return QString("BARA");
+        case mBARA:
+            return QString("Milli-BARA (1 / 1" THIN_SP_UTF8 "000)");
+        case uBARA:
+            return QString("Micro-BARA (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
-        case BWK:
-            return QString("TestBWKs");
-        case mBWK:
-            return QString("Milli-TestBWK (1 / 1" THIN_SP_UTF8 "000)");
-        case uBWK:
-            return QString("Micro-TestBWK (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+        case BARA:
+            return QString("TestBARAs");
+        case mBARA:
+            return QString("Milli-TestBARA (1 / 1" THIN_SP_UTF8 "000)");
+        case uBARA:
+            return QString("Micro-TestBARA (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
@@ -109,11 +109,11 @@ QString BitcoinUnits::description(int unit)
 qint64 BitcoinUnits::factor(int unit)
 {
     switch (unit) {
-    case BWK:
+    case BARA:
         return 100000000;
-    case mBWK:
+    case mBARA:
         return 100000;
-    case uBWK:
+    case uBARA:
         return 100;
     default:
         return 100000000;
@@ -123,11 +123,11 @@ qint64 BitcoinUnits::factor(int unit)
 int BitcoinUnits::decimals(int unit)
 {
     switch (unit) {
-    case BWK:
+    case BARA:
         return 8;
-    case mBWK:
+    case mBARA:
         return 5;
-    case uBWK:
+    case uBARA:
         return 2;
     default:
         return 0;

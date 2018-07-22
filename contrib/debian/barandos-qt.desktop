@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=barandos
+Comment=barandos P2P Cryptocurrency
+Comment[fr]=barandos, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=barandos, eşten eşe kriptografik sanal para birimi
+Exec=barandos-qt %u
+Terminal=false
+Type=Application
+Icon=barandos128
+MimeType=x-scheme-handler/barandos;
+Categories=Office;Finance;

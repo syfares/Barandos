@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2017-2018 The Bulwark developers
+// Copyright (c) 2017-2018 The bulwark developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -220,10 +220,10 @@ Value stop(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop Bulwark server.");
+            "\nStop barandos server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "Bulwark server stopping";
+    return "barandos server stopping";
 }
 
 
@@ -304,35 +304,35 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
         /* Pivx features */
-        {"bulwark", "masternode", &masternode, true, true, false},
-        {"bulwark", "listmasternodes", &listmasternodes, true, true, false},
-        {"bulwark", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"bulwark", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"bulwark", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"bulwark", "masternodedebug", &masternodedebug, true, true, false},
-        {"bulwark", "startmasternode", &startmasternode, true, true, false},
-        {"bulwark", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"bulwark", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"bulwark", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"bulwark", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"bulwark", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"bulwark", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"bulwark", "mnbudget", &mnbudget, true, true, false},
-        {"bulwark", "preparebudget", &preparebudget, true, true, false},
-        {"bulwark", "submitbudget", &submitbudget, true, true, false},
-        {"bulwark", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"bulwark", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"bulwark", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"bulwark", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"bulwark", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"bulwark", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"bulwark", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"bulwark", "checkbudgets", &checkbudgets, true, true, false},
-        {"bulwark", "mnsync", &mnsync, true, true, false},
-        {"bulwark", "spork", &spork, true, true, false},
-        {"bulwark", "getpoolinfo", &getpoolinfo, true, true, false},
+        {"barandos", "masternode", &masternode, true, true, false},
+        {"barandos", "listmasternodes", &listmasternodes, true, true, false},
+        {"barandos", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"barandos", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"barandos", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"barandos", "masternodedebug", &masternodedebug, true, true, false},
+        {"barandos", "startmasternode", &startmasternode, true, true, false},
+        {"barandos", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"barandos", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"barandos", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"barandos", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"barandos", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"barandos", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"barandos", "mnbudget", &mnbudget, true, true, false},
+        {"barandos", "preparebudget", &preparebudget, true, true, false},
+        {"barandos", "submitbudget", &submitbudget, true, true, false},
+        {"barandos", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"barandos", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"barandos", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"barandos", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"barandos", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"barandos", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"barandos", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"barandos", "checkbudgets", &checkbudgets, true, true, false},
+        {"barandos", "mnsync", &mnsync, true, true, false},
+        {"barandos", "spork", &spork, true, true, false},
+        {"barandos", "getpoolinfo", &getpoolinfo, true, true, false},
 #ifdef ENABLE_WALLET
-        {"bulwark", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
+        {"barandos", "obfuscation", &obfuscation, false, false, true}, /* not threadSafe because of SendMoney */
 
         /* Wallet */
         {"wallet", "addmultisigaddress", &addmultisigaddress, true, false, true},
@@ -597,16 +597,16 @@ void StartRPCThreads()
         unsigned char rand_pwd[32];
         GetRandBytes(rand_pwd, 32);
         uiInterface.ThreadSafeMessageBox(strprintf(
-                                             _("To use bulwarkd, or the -server option to bulwark-qt, you must set an rpcpassword in the configuration file:\n"
+                                             _("To use barandosd, or the -server option to barandos-qt, you must set an rpcpassword in the configuration file:\n"
                                                "%s\n"
                                                "It is recommended you use the following random password:\n"
-                                               "rpcuser=bulwarkrpc\n"
+                                               "rpcuser=barandosrpc\n"
                                                "rpcpassword=%s\n"
                                                "(you do not need to remember this password)\n"
                                                "The username and password MUST NOT be the same.\n"
                                                "If the file does not exist, create it with owner-readable-only file permissions.\n"
                                                "It is also recommended to set alertnotify so you are notified of problems;\n"
-                                               "for example: alertnotify=echo %%s | mail -s \"Bulwark Alert\" admin@foo.com\n"),
+                                               "for example: alertnotify=echo %%s | mail -s \"barandos Alert\" admin@foo.com\n"),
                                              GetConfigFile().string(),
                                              EncodeBase58(&rand_pwd[0], &rand_pwd[0] + 32)),
             "", CClientUIInterface::MSG_ERROR | CClientUIInterface::SECURE);
@@ -1057,7 +1057,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> bulwark-cli " + methodname + " " + args + "\n";
+    return "> barandos-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)

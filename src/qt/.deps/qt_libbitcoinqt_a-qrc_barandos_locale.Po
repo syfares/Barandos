@@ -1,0 +1,1 @@
+qt/qt_libbitcoinqt_a-qrc_barandos_locale.o: qt/qrc_barandos_locale.cpp

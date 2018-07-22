@@ -1,18 +1,18 @@
-![Bulwark Logo](https://bulwarkcrypto.com/wp-content/uploads/2018/03/Badge-Full-Color.svg)
+![barandos Logo](https://barandos.com/wp-content/uploads/2018/03/Badge-Full-Color.svg)
 
-Bulwark Cryptocurrency
+barandos Cryptocurrency
 &middot;
-[![GitHub license](https://img.shields.io/github/license/bulwark-crypto/Bulwark.svg)](https://github.com/bulwark-crypto/Bulwark/blob/master/COPYING) [![Build Status](https://travis-ci.org/bulwark-crypto/Bulwark.svg?branch=master)](https://travis-ci.org/bulwark-crypto/Bulwark) [![GitHub version](https://badge.fury.io/gh/bulwark-crypto%2FBulwark.svg)](https://badge.fury.io/gh/bulwark-crypto%2FBulwark) [![Discord](https://img.shields.io/discord/374271866308919296.svg)](https://discord.me/bulwarkcrypto)
+[![GitHub license](https://img.shields.io/github/license/barandos-crypto/barandos.svg)](https://github.com/barandos-crypto/barandos/blob/master/COPYING) [![Build Status](https://travis-ci.org/barandos-crypto/barandos.svg?branch=master)](https://travis-ci.org/barandos-crypto/barandos) [![GitHub version](https://badge.fury.io/gh/barandos-crypto%2Fbarandos.svg)](https://badge.fury.io/gh/barandos-crypto%2Fbarandos) [![Discord](https://img.shields.io/discord/374271866308919296.svg)](https://discord.me/barandos)
 =====
 
-Bulwark (BWK) is a privacy oriented digital currency with Masternodes implemented.
-Bulwark offers both SwiftTX and Obfuscation to enable speedy transactions with a Seesaw Staking / Masternode reward balancing mechanism to promote strong network security after the Proof of Work phase
+barandos (BARA) is a privacy oriented digital currency with Masternodes implemented.
+barandos offers both SwiftTX and Obfuscation to enable speedy transactions with a Seesaw Staking / Masternode reward balancing mechanism to promote strong network security after the Proof of Work phase
 
 ## Specifications
 
 | Specification         | Descriptor                              |
 |-----------------------|-----------------------------------------|
-| Ticker                | BWK                                     |
+| Ticker                | BARA                                     |
 | Algorithm             | NIST5                                   |
 | RPC Port              | 52541                                   |
 | P2P Port              | 52543                                   |
@@ -21,8 +21,8 @@ Bulwark offers both SwiftTX and Obfuscation to enable speedy transactions with a
 | Block Size            | 1MB                                     |
 | Mined/Minted Maturity | 67 Blocks (~100 Minutes)                |
 | Confirmation          | 6 Blocks (~9 Minutes)                   |
-| Circulation (1 Year)  | 14,505,720 BWK                          |
-| Circulation (5 Years) | 27,668,220 BWK                          |
+| Circulation (1 Year)  | 14,505,720 BARA                          |
+| Circulation (5 Years) | 27,668,220 BARA                          |
 | PoW Period            | nHeight ≤ 182,700                       |
 | PoS Period            | nHeight ≥ 182,701                       |
 | Protocol Support      | IPV4, IPV6, TOR                         |
