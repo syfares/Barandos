@@ -54,7 +54,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-        (0, uint256("0x0000068e7ab8e264f6759d2d81b29e8b917c10b04db47a9a0bb3cba3fba5d574"));
+        (0, uint256("000000d94b16b78ee4f8f2ed6850002d2047a76e09d9db924e31975525969e70"));
 
  
 static const Checkpoints::CCheckpointData data = {
@@ -128,11 +128,12 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1532204261;
         genesis.nBits = bnProofOfWorkLimit.GetCompact();;
-        genesis.nNonce = 125854; 
+        genesis.nNonce = 394002; 
 
 	    hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x0000068e7ab8e264f6759d2d81b29e8b917c10b04db47a9a0bb3cba3fba5d574"));
-	    assert(genesis.hashMerkleRoot == uint256("0x77976d6bd593c84063ac3937525bc15e25188d96871b13d4451ffc382999f64f"));
+                
+        assert(hashGenesisBlock == uint256("000000d94b16b78ee4f8f2ed6850002d2047a76e09d9db924e31975525969e70"));
+	    assert(genesis.hashMerkleRoot == uint256("73aa04ebc814b37be40d4ed39024241a9775e9a578f951fbcf38ef7fa23121db"));
 
         vSeeds.push_back(CDNSSeedData("barandos.com", "dns11.ovh.net"));
         vSeeds.push_back(CDNSSeedData("barandos.com", "ns11.ovh.net"));
@@ -202,13 +203,13 @@ public:
         nToCheckBlockUpgradeMajority = 100;
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
-        genesis.nTime = 1514516171;
-        genesis.nNonce = 250375;
+        genesis.nTime = 1532204261;
+        genesis.nNonce = 394002;
         genesis.nBits = bnProofOfWorkLimit.GetCompact();
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000001a2f1a9a313468d66b81dd2cb199f6f8f5d426198a7c4daa9c3f9498285"));
-        assert(genesis.hashMerkleRoot == uint256("0x77976d6bd593c84063ac3937525bc15e25188d96871b13d4451ffc382999f64f"));
+        assert(hashGenesisBlock == uint256("000000d94b16b78ee4f8f2ed6850002d2047a76e09d9db924e31975525969e70"));
+        assert(genesis.hashMerkleRoot == uint256("73aa04ebc814b37be40d4ed39024241a9775e9a578f951fbcf38ef7fa23121db"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
