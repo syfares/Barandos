@@ -5,28 +5,27 @@ barandos Cryptocurrency
 [![GitHub license](https://img.shields.io/github/license/barandos-crypto/barandos.svg)](https://github.com/barandos-crypto/barandos/blob/master/COPYING) [![Build Status](https://travis-ci.org/barandos-crypto/barandos.svg?branch=master)](https://travis-ci.org/barandos-crypto/barandos) [![GitHub version](https://badge.fury.io/gh/barandos-crypto%2Fbarandos.svg)](https://badge.fury.io/gh/barandos-crypto%2Fbarandos) [![Discord](https://img.shields.io/discord/374271866308919296.svg)](https://discord.me/barandos)
 =====
 
-barandos (BARA) is a privacy oriented digital currency with Masternodes implemented.
-barandos offers both SwiftTX and Obfuscation to enable speedy transactions with a Seesaw Staking / Masternode reward balancing mechanism to promote strong network security after the Proof of Work phase
+Barandos (BARA) is a privacy oriented digital currency with Masternodes implemented.
 
 ## Specifications
 
 | Specification         | Descriptor                              |
 |-----------------------|-----------------------------------------|
-| Ticker                | BARA                                     |
+| Ticker                | BARA                                    |
 | Algorithm             | NIST5                                   |
 | RPC Port              | 52541                                   |
 | P2P Port              | 52543                                   |
-| Block Spacing         | 90 Seconds                              |
+| Block Spacing         | 60 Seconds                              |
 | Difficulty Algorithm  | Dark Gravity Wave v3.0                  |
 | Block Size            | 1MB                                     |
-| Mined/Minted Maturity | 67 Blocks (~100 Minutes)                |
+| Mined/Minted Maturity | 60 Blocks (~100 Minutes)                |
 | Confirmation          | 6 Blocks (~9 Minutes)                   |
-| Circulation (1 Year)  | 14,505,720 BARA                          |
-| Circulation (5 Years) | 27,668,220 BARA                          |
-| PoW Period            | nHeight ≤ 182,700                       |
-| PoS Period            | nHeight ≥ 182,701                       |
+| Circulation (1 Year)  | 3,176,780 BARA                          |
+| Circulation (5 Years) | 5,852,980 BARA                          |
+| PoW Period            | nHeight ≤ 150,000                       |
+| PoS Period            | nHeight ≥ 150,001                       |
 | Protocol Support      | IPV4, IPV6, TOR                         |
-| PoS                   | SeeSaw & Split Rewards                  |
+| PoS                   | Split Rewards                           |
 
 ## PoW Block Reward
 

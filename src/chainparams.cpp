@@ -101,11 +101,9 @@ public:
         bnProofOfWorkLimit = ~uint256(0) >> 20; // barandos starting difficulty is 1 / 2^12
         nMaxReorganizationDepth = 100;
         nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // barandos: 1.5 minutes
-        nTargetSpacingSlowLaunch = 5 * 90;  // barandos: 7.5 minutes (Slow launch - Block 300)
-	    nTargetSpacing = 1 * 60; // barandos: 1.5min after block 300
+        nTargetTimespan = 1 * 60; // barandos: 1 minute
+	    nTargetSpacing = 1 * 60; // barandos: 1min
         nLastPOWBlock = 150000; 
-	    nRampToBlock = 960; // Slow start, ramp linearly to this block
         nMaturity = 60; // 60 Minutes
 	    nMasternodeCountDrift = 4;
         nModifierUpdateBlock = 1;
@@ -135,16 +133,16 @@ public:
         assert(hashGenesisBlock == uint256("000000d94b16b78ee4f8f2ed6850002d2047a76e09d9db924e31975525969e70"));
 	    assert(genesis.hashMerkleRoot == uint256("73aa04ebc814b37be40d4ed39024241a9775e9a578f951fbcf38ef7fa23121db"));
 
-        vSeeds.push_back(CDNSSeedData("barandos.com", "dns11.ovh.net"));
-        vSeeds.push_back(CDNSSeedData("barandos.com", "ns11.ovh.net"));
+        vSeeds.push_back(CDNSSeedData("217.182.65.146", "dns11.ovh.net"));
+        vSeeds.push_back(CDNSSeedData("51.38.231.83", "ns11.ovh.net"));
         
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 30);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 13);
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 212);
-        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x25)(0x26).convert_to_container<std::vector<unsigned char> >();
-        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0x21)(0x31)(0x26).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x02)(0x2D)(0x24)(0x36).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0x81)(0x33)(0x26).convert_to_container<std::vector<unsigned char> >();
 	    //BIP44 as defined by https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki
-        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x77).convert_to_container<std::vector<unsigned char> >();
+        base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x82)(0x00)(0x00)(0x75).convert_to_container<std::vector<unsigned char> >();
 
 	    convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
         
@@ -159,8 +157,8 @@ public:
         fHeadersFirstSyncingActive = false;
         
 	    nPoolMaxTransactions = 3;
-        strSporkKey = "0453748e298a34e32d760a3d64b7b517c952c10024a4160a3a746d9bce572f85e13ac6d4f518ac110ba807ce19fb657bc2696ca02013290e3fbe517adf09c95787";
-        strObfuscationPoolDummyAddress = "bDiJwVuKv9dcKBN4KCfX6UmXbkpqLfzGyf";
+        strSporkKey = "04b59814927806e0e945ce1b01b784309113b5866c0aae7b1462deba7f5bcefdc2cbaf24d9a336274ad54f2edca50b0f4cc6e56d93f368cf60753251b98cd210a2";
+    #    strObfuscationPoolDummyAddress = "bDiJwVuKv9dcKBN4KCfX6UmXbkpqLfzGyf";
         nStartMasternodePayments = 1532204261; 
     }
     const Checkpoints::CCheckpointData& Checkpoints() const
